@@ -1,9 +1,10 @@
-name: Create tk-422-master-config issue
+name: Create-tk-422-master-config issue
 
 on:
   pull_request:
-    types:
-      - merged
+    types: [closed]
+    branches:
+      - main
 
 jobs:
   create-issue:
