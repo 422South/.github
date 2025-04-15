@@ -1,0 +1,12 @@
+on:
+  repository_dispatch:
+    types: [triggered-from-test-bundle]
+
+jobs:
+  react-to-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Respond to repository_dispatch event
+        run: echo "Workflow triggered by test-bundle with message: ${{ github.event.client_payload.message }}"
+
+        
